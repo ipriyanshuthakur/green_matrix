@@ -2,7 +2,7 @@
 import sys
 import csv
 import os
-
+import math
 def process_csv(csv_file):
     """Turn the contents of the CSV file into a list of lists"""
     print("Processing {}".format(csv_file))
@@ -20,7 +20,7 @@ def data_to_html(title, data):
 <style>
 table {
   width: 25%;
-  font-family: arial, sans-serif;
+  font-family: arial, sans-serif, Times New Roman;
   border-collapse: collapse;
 }
 
@@ -71,7 +71,7 @@ def main():
     """Verifies the arguments and then calls the processing function"""
     # Check that command-line arguments are included
     if len(sys.argv) < 3:
-        print("ERROR: Missing command-line argument!")
+        print("ERROR: Sorry Missing command-line argument!")
         print("Exiting program...")
         sys.exit(1)
 
@@ -92,7 +92,7 @@ def main():
 
     # Check that the csv file exists
     if not os.path.exists(csv_file):
-        print("{} does not exist".format(csv_file))
+        print("{} Sorry does not exist".format(csv_file))
         print("Exiting program...")
         sys.exit(1)
 
